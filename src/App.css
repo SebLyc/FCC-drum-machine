@@ -1,0 +1,41 @@
+:root {
+  --background-color: #330c0c;
+  --drum-pad-background-color: #554242;
+  --drum-pad-border-color: #6d2c2c;
+  --drum-pad-text-color: white;
+  --drum-pad-font-size: 20px;
+  --drum-pad-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.264);
+}
+
+.container {
+  text-align: center;
+  margin: 50px;
+}
+
+.whole-drum {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 50px auto;
+  width: min-content;
+  padding: 2%;
+  background: var(--background-color);
+  border-radius: 20px;
+}
+
+.drum-pad {
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--drum-pad-border-color);
+  background-color: var(--drum-pad-background-color);
+  color: var(--drum-pad-text-color);
+  font-size: var(--drum-pad-font-size);
+  border-radius: 8px;
+  box-shadow: var(--drum-pad-box-shadow);
+  transition: all 0.2s ease-in-out;
+}
+
+.drum-pad:active {
+  transform: translate(4px, 4px);
+}
